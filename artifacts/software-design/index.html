@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Software Design and Engineering | Derek Heiney</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            background-color: #f4f6f8;
+            color: #222;
+            margin: 0;
+        }
+
+        header {
+            background-color: #1f2937;
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        }
+
+        h2, h3 {
+            color: #1f2937;
+        }
+
+        .download {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px 10px 5px 0;
+            background-color: #1f2937;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .download:hover {
+            background-color: #374151;
+        }
+
+        a {
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Software Design and Engineering</h1>
+    <p>Enhancement One | CS 499 Computer Science Capstone</p>
+</header>
+
+<main>
+
+<section>
+    <h2>Artifact</h2>
+
+    <p>
+        The artifact selected for this enhancement is my final project from
+        CS 330: Computational Graphics and Visualization. The application is
+        a C++ and OpenGL Star Trek battle scene containing Federation and
+        Klingon starships, a planet, starfield, photon torpedoes, textures,
+        lighting, and an interactive camera.
+    </p>
+
+    <a class="download"
+       href="original/CS330_StarTrekOG.zip">
+        Download Original Artifact
+    </a>
+
+    <a class="download"
+       href="enhanced/CS330_StarTrek_Week3.zip">
+        Download Enhanced Artifact
+    </a>
+</section>
+
+
+<section>
+    <h2>Enhancement Overview</h2>
+
+    <p>
+        The original project successfully created the required three-dimensional
+        scene, but much of its configuration and resource management was tightly
+        coupled to the SceneManager. The purpose of Enhancement One was to
+        improve the architecture, maintainability, extensibility, and defensive
+        programming of the application without changing the appearance of the
+        completed scene.
+    </p>
+
+    <p>
+        The enhanced version introduced a SceneObject model and reorganized the
+        application into a more data-driven scene architecture. Scene objects
+        are stored in a dynamic collection and processed through a common
+        rendering path rather than being individually hard-coded inside the
+        main RenderScene method.
+    </p>
+
+    <p>
+        Additional improvements included replacing fixed texture storage with
+        a dynamic container, using smart pointers to make resource ownership
+        clearer, correcting material lookup behavior, validating texture
+        lookups, and improving cleanup and error handling.
+    </p>
+</section>
+
+
+<section>
+    <h2>Skills Demonstrated</h2>
+
+    <p>
+        This enhancement demonstrates object-oriented design, refactoring,
+        C++ standard-library containers, RAII and smart-pointer resource
+        management, defensive programming, OpenGL development, CMake, and
+        evaluation of architectural trade-offs.
+    </p>
+
+    <p>
+        One of the most important lessons from this enhancement was recognizing
+        the difference between software that simply functions and software
+        that is structured to support future development. Rather than replacing
+        code that already worked well, I concentrated on separating scene data
+        from rendering behavior and correcting areas where the original design
+        made future changes more difficult.
+    </p>
+</section>
+
+
+<section>
+    <h2>Course Outcomes</h2>
+
+    <p>
+        This enhancement primarily supports the course outcomes related to
+        designing and evaluating computing solutions, applying well-founded
+        software-development techniques, and developing a security mindset.
+        Defensive resource handling, validation, and clearer ownership reduced
+        several weaknesses identified during the original code review.
+    </p>
+</section>
+
+
+<section>
+    <h2>Reflection</h2>
+
+    <p>
+        Revisiting this artifact after completing additional coursework gave me
+        a different perspective on the original implementation. When I first
+        created the project, my main goal was making the scene work correctly.
+        During the capstone enhancement, I approached the same project from the
+        perspective of maintainability, extensibility, reliability, and future
+        development.
+    </p>
+
+    <p>
+        The refactored architecture also provided the foundation for the later
+        Algorithms and Data Structures and Database enhancements, demonstrating
+        how software design decisions affect the ability to continue extending
+        an application.
+    </p>
+
+    <p>
+        <a href="../../index.html">Return to ePortfolio Home</a>
+    </p>
+</section>
+
+</main>
+
+</body>
+</html>
